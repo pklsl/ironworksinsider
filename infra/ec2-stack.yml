@@ -63,11 +63,6 @@ Resources:
       Roles:
         - !Ref EC2InstanceRole
 
-  ElasticIP:
-    Type: AWS::EC2::EIP
-    Properties:
-      Domain: vpc
-
   WebServerInstance:
     Type: AWS::EC2::Instance
     Properties:
@@ -137,12 +132,6 @@ Resources:
       Tags:
         - Key: Name
           Value: ironworksinsider-web-server
-
-  ElasticIPAssociation:
-    Type: AWS::EC2::EIPAssociation
-    Properties:
-      InstanceId: !Ref WebServerInstance
-      AllocationId: !GetAtt ElasticIP.AllocationId
 
   CodeDeployArtifactsBucket:
     Type: AWS::S3::Bucket
@@ -347,9 +336,9 @@ Outputs:
   InstanceId:
     Description: EC2 instance ID
     Value: !Ref WebServerInstance
-  ElasticIP:
-    Description: Elastic IP address of the web server
-    Value: !GetAtt ElasticIP.PublicIp
+  PublicIP:
+    Description: Public IP address of the web server
+    Value: !GetAtt WebServerInstance.PublicIp
   CodeDeployApplication:
     Description: CodeDeploy application name
     Value: !Ref CodeDeployApplication
