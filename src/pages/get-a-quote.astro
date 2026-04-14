@@ -1,0 +1,68 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import LeadGenForm from '@/components/LeadGenForm.astro';
+
+const HEAVY_MACHINERY_SERVICES = [
+  'Heavy Equipment Repair',
+  'Welding & Fabrication',
+  'Hydraulic System Service',
+  'Engine Overhaul',
+  'Crane & Rigging',
+  'Metal Cutting & Forming',
+  'Equipment Transport',
+  'Other Heavy Machinery Service',
+];
+---
+
+<BaseLayout
+  title="Get a Free Equipment Service Quote | IronworksInsider"
+  description="Request a free quote from a qualified heavy machinery service provider. No obligation — we'll match you with a pro in your area."
+>
+  <section class="py-16 md:py-24 bg-surface">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="grid lg:grid-cols-2 gap-12 items-start">
+        <div class="pt-4">
+          <span class="inline-block bg-primary/10 text-primary text-sm font-semibold px-3 py-1 rounded-full mb-4">Free & No Obligation</span>
+          <h1 class="text-4xl md:text-5xl font-bold font-heading text-text leading-tight mb-6">
+            Get a Free Equipment Service Quote
+          </h1>
+          <p class="text-lg text-text-muted mb-8 leading-relaxed">
+            Tell us about your heavy machinery needs and we'll connect you with a qualified service provider within 1 business day. No hidden fees, no pressure.
+          </p>
+          <ul class="space-y-4">
+            <li class="flex items-start gap-3">
+              <span class="text-primary font-bold text-lg mt-0.5">&#10003;</span>
+              <div>
+                <p class="font-semibold text-text">Certified & Insured Providers</p>
+                <p class="text-text-muted text-sm">Every service provider in our network is licensed, insured, and experienced with heavy equipment.</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-primary font-bold text-lg mt-0.5">&#10003;</span>
+              <div>
+                <p class="font-semibold text-text">Fast Response</p>
+                <p class="text-text-muted text-sm">Receive a callback or email within 1 business day of submitting your request.</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-primary font-bold text-lg mt-0.5">&#10003;</span>
+              <div>
+                <p class="font-semibold text-text">No Obligation</p>
+                <p class="text-text-muted text-sm">Getting a quote is free. You decide if and when to move forward.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <LeadGenForm
+            siteId="ironworksinsider"
+            serviceTypes={HEAVY_MACHINERY_SERVICES}
+            heading="Request Your Free Quote"
+            subheading="Fill out the form and a qualified service provider will be in touch shortly."
+            variant="page"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
