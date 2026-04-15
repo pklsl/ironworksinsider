@@ -22,9 +22,20 @@ const articles = (await getCollection('articles'))
   .slice(0, 3);
 
 const featuredArticle = articles[0];
+
+const websiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'IronworksInsider',
+  url: Astro.site?.href,
+};
 ---
 
-<BaseLayout title="Home" description="IronworksInsider — Your trusted source for heavy machinery guides, welding techniques, and fabrication resources for professionals and operators.">
+<BaseLayout
+  title="Home"
+  description="IronworksInsider — Your trusted source for heavy machinery guides, welding techniques, and fabrication resources for professionals and operators."
+  structuredData={[websiteSchema]}
+>
   <section class="py-16 md:py-24 bg-white">
     <div class="max-w-6xl mx-auto px-4">
       <div class="grid lg:grid-cols-2 gap-12 items-center">
