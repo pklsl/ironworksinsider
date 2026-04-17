@@ -3,7 +3,7 @@ title: "How to Perform a Pre-Operation Inspection on Heavy Equipment"
 description: "A step-by-step guide to inspecting heavy machinery before operation — covering fluids, hydraulics, tracks, safety systems, and documentation requirements for OSHA compliance."
 pubDate: 2026-04-14
 updatedDate: 2026-04-14
-author: "IronworksInsider Team"
+author: "Tom Banning"
 tags: ["heavy equipment", "safety", "maintenance", "inspection", "OSHA"]
 image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=compress&cs=tinysrgb&w=800"
 ---
