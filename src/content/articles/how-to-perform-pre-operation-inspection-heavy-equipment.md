@@ -5,7 +5,7 @@ pubDate: 2026-04-14
 updatedDate: 2026-04-14
 author: "Tom Banning"
 tags: ["heavy equipment", "safety", "maintenance", "inspection", "OSHA"]
-image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=compress&cs=tinysrgb&w=800"
+image: "https://images.pexels.com/photos/16368437/pexels-photo-16368437.jpeg?auto=compress&cs=tinysrgb&w=800"
 ---
 
 A thorough pre-operation inspection is the single most important thing you can do to prevent equipment failures, workplace injuries, and costly downtime. Whether you're operating an excavator, bulldozer, crane, or loader, a systematic walk-around check takes 10 to 15 minutes and can save thousands of dollars — and potentially lives.
