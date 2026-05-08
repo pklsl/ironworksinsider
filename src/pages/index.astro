@@ -1,20 +1,7 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
-import AdSlot from '@/components/AdSlot.astro';
 import EmailSignup from '@/components/EmailSignup.astro';
-import LeadGenForm from '@/components/LeadGenForm.astro';
 import { getCollection } from 'astro:content';
-
-const HEAVY_MACHINERY_SERVICES = [
-  'Heavy Equipment Repair',
-  'Welding & Fabrication',
-  'Hydraulic System Service',
-  'Engine Overhaul',
-  'Crane & Rigging',
-  'Metal Cutting & Forming',
-  'Equipment Transport',
-  'Other Heavy Machinery Service',
-];
 
 const DEFAULT_IMAGE = "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=compress&cs=tinysrgb&w=800";
 const articles = (await getCollection('articles'))
@@ -69,10 +56,6 @@ const websiteSchema = {
     </div>
   </section>
 
-  <div class="max-w-6xl mx-auto px-4 py-4">
-    <AdSlot slot="home-in-content-1" format="horizontal" lazy={true} minHeight="90px" />
-  </div>
-
   {articles.length > 0 && (
     <section class="py-16 bg-surface">
       <div class="max-w-6xl mx-auto px-4">
@@ -117,10 +100,6 @@ const websiteSchema = {
       </div>
     </section>
   )}
-
-  <div class="max-w-6xl mx-auto px-4 py-4">
-    <AdSlot slot="home-in-content-2" format="horizontal" lazy={true} minHeight="90px" />
-  </div>
 
   <section class="py-16 bg-surface">
     <div class="max-w-2xl mx-auto px-4">
